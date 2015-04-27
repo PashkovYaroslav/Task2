@@ -9,9 +9,7 @@ public class People {
     protected boolean gender;
     protected String firstName;
     protected String lastName;
-    // Рост
     protected float growth;
-    // Вес
     protected float weight;
 
     public People(){
@@ -55,7 +53,12 @@ public class People {
     }
 
     public void setGrowth(float growth) {
+        if(growth>0){
         this.growth = growth;
+        }
+        else{
+            throw new IllegalArgumentException("Growth is less than 0");
+        }
     }
 
     public float getWeight() {
@@ -63,7 +66,12 @@ public class People {
     }
 
     public void setWeight(float weight) {
+        if(weight>0){
         this.weight = weight;
+        }
+        else{
+            throw new IllegalArgumentException("Weight is less than 0");
+        }
     }
 
     public boolean speak(People people) {
