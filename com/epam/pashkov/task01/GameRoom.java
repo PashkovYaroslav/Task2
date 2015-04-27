@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class GameRoom {
     private ArrayList<Toy> toys;
-    private double count;
+    private double countMoney;
 
     public ArrayList<Toy> getToys() {
         return toys;
@@ -17,30 +17,30 @@ public class GameRoom {
         this.toys = toys;
     }
 
-    public double getCount() {
-        return count;
+    public double getCountMoney() {
+        return countMoney;
     }
 
-    public void setCount(double count) {
-        if(count>0) {
-            this.count = count;
+    public void setCountMoney(double countMoney) {
+        if(countMoney >0) {
+            this.countMoney = countMoney;
         }
         else{
-            throw new IllegalArgumentException("Incorrect count.");
+            throw new IllegalArgumentException("Incorrect money count.");
         }
     }
 
-    public GameRoom(ArrayList<Toy> t, double count) {
+    public GameRoom(ArrayList<Toy> t, double countMoney) {
         this.toys = new ArrayList<Toy>();
-        setCount(count);
+        setCountMoney(countMoney);
         double currentCost = 0;
         for(int i = 0; i<t.size(); i++){
-            if(count>=currentCost+t.get(i).getCount()*t.get(i).getPrice()){
+            if(countMoney >=currentCost+t.get(i).getCount()*t.get(i).getPrice()){
                 toys.add(t.get(i));
                 currentCost+=t.get(i).getCount()*t.get(i).getPrice();
             }
         }
-        this.count = count;
+        this.countMoney = countMoney;
     }
 
     // Select all toys by price

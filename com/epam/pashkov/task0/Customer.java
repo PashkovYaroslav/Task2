@@ -115,15 +115,6 @@ public class Customer {
         setBankAccount(bankAccount);
     }
 
-    // Return the collection of cutomers in range of credit card number [start, stop]
-    public static ArrayList<Customer> selectedCustomers(Customer[] customers,int start, int stop){
-        ArrayList<Customer> selected = new ArrayList<Customer>();
-        for(Customer c: customers){
-            if(c.getCreditCardNumber()>=start && c.getCreditCardNumber()<=stop) selected.add(c);
-        }
-        return selected;
-    }
-
     @Override
     public String toString() {
         return "Customer{" +

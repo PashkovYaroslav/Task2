@@ -22,6 +22,7 @@ public class Main {
         System.out.println(gr);
 
         // Sort the toys in room by price
+        System.out.println("Sort toys by price:");
         Collections.sort(gr.getToys());
         System.out.println(gr);
 

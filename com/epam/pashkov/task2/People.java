@@ -54,7 +54,7 @@ public class People {
 
     public void setGrowth(float growth) {
         if(growth>0){
-        this.growth = growth;
+            this.growth = growth;
         }
         else{
             throw new IllegalArgumentException("Growth is less than 0");
@@ -67,7 +67,7 @@ public class People {
 
     public void setWeight(float weight) {
         if(weight>0){
-        this.weight = weight;
+            this.weight = weight;
         }
         else{
             throw new IllegalArgumentException("Weight is less than 0");
@@ -195,11 +195,11 @@ public class People {
         String g = this.gender ? "Male" : "Female";
 
         return (this.firstName != null) ? "People{" +
-                    "Gender: " + g +
-                    ", First Name: " + firstName +
-                    ", Last Name: " + lastName +
-                    ", Growth: " + growth +
-                    ", Weight: " + weight +
-                    '}' : "Nothing happend.";
+                "Gender: " + g +
+                ", First Name: " + firstName +
+                ", Last Name: " + lastName +
+                ", Growth: " + growth +
+                ", Weight: " + weight +
+                '}' : "Nothing happend.";
     }
 }
